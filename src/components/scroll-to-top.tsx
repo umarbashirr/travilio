@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowUp } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import { BsArrowUp } from "react-icons/bs";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,13 +45,13 @@ const ScrollToTop = () => {
     <div className="fixed bottom-4 right-4 z-50">
       {isVisible && (
         <div
-          className="flex items-center justify-center w-10 h-10 bg-transparent text-primary rounded-full cursor-pointer"
+          className="flex items-center justify-center w-10 h-10 bg-transparent text-orange-500 rounded-full cursor-pointer"
           onClick={scrollToTop}
           style={{
-            border: `4px solid rgba(151, 134, 103, ${scrollProgress / 100})`,
+            border: `4px solid rgba(249, 115, 22, ${scrollProgress / 100})`,
           }}
         >
-          <ArrowUp />
+          <BsArrowUp />
         </div>
       )}
     </div>

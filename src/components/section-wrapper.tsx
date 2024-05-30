@@ -10,7 +10,7 @@ interface SectionWrapperProps {
 
 const SectionWrapper = ({ className, children }: SectionWrapperProps) => {
   return (
-    <div className={cn("w-full h-full py-12 md:py-20 lg:py-28", className)}>
+    <div className={cn("w-full h-full my-12 md:my-20 lg:my-28", className)}>
       {children}
     </div>
   );

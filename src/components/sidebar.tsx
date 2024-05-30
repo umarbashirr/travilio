@@ -4,7 +4,8 @@ import Link from "next/link";
 import Logo from "./logo";
 import { SITE_ROUTES } from "@/utils/data";
 import { cn } from "@/lib/utils";
-import { X } from "lucide-react";
+import { FaTimes } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -12,6 +13,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
+  const pathname = usePathname();
   return (
     <div className="relative">
       <div
@@ -24,9 +26,9 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           className={cn("absolute top-3 right-3")}
           onClick={() => setIsOpen(false)}
         >
-          <X size={24} />
+          <FaTimes size={24} />
         </button>
-        <div className="p-8 flex items-center justify-center bg-[#FAF8F5] text-center">
+        <div className="p-8 flex items-center justify-center bg-orange-50 text-center">
           <Logo />
         </div>
         <div className="space-y-4 flex flex-col mt-10 text-primary-blue-color px-4">
@@ -35,7 +37,10 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
               <Link
                 key={route.label}
                 href={route.path}
-                className="hover:text-orange-400 font-medium duration-200 ease-in-out transition-colors"
+                className={cn(
+                  "hover:text-orange-500 text-xl font-medium duration-200 ease-in-out transition-colors",
+                  pathname === route?.path ? "text-orange-500" : "text-primary"
+                )}
                 onClick={() => setIsOpen(false)}
               >
                 {route.label}

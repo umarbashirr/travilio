@@ -5,17 +5,19 @@ import { SITE_ROUTES } from "@/utils/data";
 import Link from "next/link";
 import BoxedContainer from "./boxed-container";
 import Logo from "./logo";
-// import Sidebar from "./sidebar";
 import { useState } from "react";
-import { MenuIcon } from "lucide-react";
+import { HiMenuAlt3 } from "react-icons/hi";
 import { createPortal } from "react-dom";
 
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 
 const Sidebar = dynamic(() => import("./sidebar"));
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+
   return (
     <header className="bg-white h-20 flex items-center justify-start w-full">
       <BoxedContainer className="flex items-center justify-between">
@@ -27,8 +29,9 @@ const Header = () => {
                 <li
                   key={route.path}
                   className={cn(
-                    "hover:text-orange-400 duration-200 ease-in-out transition-all",
-                    !route?.primary ? "hidden" : "inline-flex"
+                    "hover:text-orange-500 duration-200 ease-in-out transition-all font-semibold",
+                    !route?.primary ? "hidden" : "inline-flex",
+                    pathname === route.path ? "text-orange-500" : "text-primary"
                   )}
                 >
                   <Link href={route?.path}>{route.label}</Link>
@@ -37,12 +40,9 @@ const Header = () => {
             })}
           </ul>
           <button className="flex lg:hidden" onClick={() => setIsOpen(true)}>
-            <MenuIcon size={24} />
+            <HiMenuAlt3 size={24} />
           </button>
-          {createPortal(
-            <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />,
-            document.body
-          )}
+          <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </nav>
       </BoxedContainer>
     </header>

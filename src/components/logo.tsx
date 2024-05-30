@@ -12,6 +12,7 @@ const Logo = () => {
         alt={SITE_INFO.site_name + " logo"}
         width={120}
         height={60}
+        priority
       />
     </Link>
   );

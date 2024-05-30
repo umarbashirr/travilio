@@ -1,3 +1,6 @@
+import { FaRoute, FaMapMarkedAlt } from "react-icons/fa";
+import { BiSolidDiscount } from "react-icons/bi";
+
 export const SITE_INFO = {
   site_name: "Travilio",
   tagline: "Your Gateway to Unforgettable Adventures",
@@ -76,3 +79,106 @@ export const SITE_ROUTES = [
     primary: false,
   },
 ];
+
+export const HOME_PAGE = {
+  hero: {
+    title: "Discover Your Next Adventure",
+    subtitle: "Explore the world with our exclusive tours and travel packages",
+    background_image: "/images/hero-bg.jpg",
+    cta_text: "Browse Tours",
+  },
+  features: [
+    {
+      icon: (
+        <FaMapMarkedAlt
+          size={48}
+          className="group-hover:text-white duration-300 ease-in-out transition-all mb-6 mx-auto"
+        />
+      ),
+      title: "Expert Guides",
+      description:
+        "Our experienced guides ensure you have an insightful and enjoyable journey.",
+    },
+    {
+      icon: (
+        <FaRoute
+          size={48}
+          className="group-hover:text-white duration-300 ease-in-out transition-all mb-6 mx-auto"
+        />
+      ),
+
+      title: "Customized Tours",
+      description:
+        "Tailor-made itineraries to suit your preferences and interests.",
+    },
+    {
+      icon: (
+        <BiSolidDiscount
+          size={48}
+          className="group-hover:text-white duration-300 ease-in-out transition-all mb-6 mx-auto"
+        />
+      ),
+      title: "Best Price Guarantee",
+      description:
+        "We offer competitive pricing without compromising on quality.",
+    },
+  ],
+  banner_cta: {
+    headline: "Explore the World with Travilio",
+    subheadline: "Unforgettable journeys to breathtaking destinations",
+    cta_text: "Discover Now",
+    cta_url: "/destinations",
+    background_image: "kashmir-1",
+  },
+  popular_destinations: {
+    title: "Popular Destinations",
+    description:
+      "Discover our most sought-after destinations and start planning your next trip.",
+    destinations: [
+      {
+        image: "/images/dubai-d.jpg",
+        name: "Dubai",
+        state_province: "dubai",
+        link: "/destinations/dubai",
+      },
+      {
+        image: "/images/bali.jpg",
+        name: "Bali",
+        state_province: "bali",
+        link: "/destinations/bali",
+      },
+
+      {
+        image: "/images/kashmir-d.jpg",
+        name: "Kashmir",
+        state_province: "Jammu and Kashmir",
+        link: "/destinations/kashmir",
+      },
+      {
+        image: "/images/vietnam.jpg",
+        name: "Vietnam",
+        state_province: "vietnam",
+        link: "/destinations/vietnam",
+      },
+    ],
+  },
+  testimonials: [
+    {
+      quote:
+        "An amazing experience! The tour was well organized and the guide was fantastic.",
+      author: "John Doe",
+      location: "California, USA",
+    },
+    {
+      quote: "A trip to remember! Highly recommend their services.",
+      author: "Jane Smith",
+      location: "London, UK",
+    },
+  ],
+  newsletter: {
+    title: "Stay Updated",
+    description:
+      "Sign up for our newsletter to receive the latest news and special offers.",
+    cta_text: "Subscribe",
+  },
+};
