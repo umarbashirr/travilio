@@ -45,7 +45,7 @@ const PopularDestinations = () => {
     <BoxedContainer>
       <div>
         <header className="text-center">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold">
             {HOME_PAGE.popular_destinations.title}
           </h2>
           <p className="mt-4">{HOME_PAGE.popular_destinations.description}</p>

@@ -9,7 +9,9 @@ const Packages = () => {
     <BoxedContainer>
       <div>
         <header className="text-center">
-          <h2 className="text-4xl font-bold">Latest Tour Packages</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Latest Tour Packages
+          </h2>
           <p className="mt-4">
             Check out our latest tour packages and book your dream vacation
             today!

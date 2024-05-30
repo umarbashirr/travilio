@@ -1,5 +1,8 @@
 import { FaRoute, FaMapMarkedAlt } from "react-icons/fa";
-import { BiSolidDiscount } from "react-icons/bi";
+import { BiShieldAlt, BiSolidDiscount } from "react-icons/bi";
+import { BsGlobe } from "react-icons/bs";
+import { FcRating } from "react-icons/fc";
+import { TbFriends } from "react-icons/tb";
 
 export const SITE_INFO = {
   site_name: "Travilio",
@@ -87,6 +90,44 @@ export const HOME_PAGE = {
     background_image: "/images/hero-bg.jpg",
     cta_text: "Browse Tours",
   },
+
+  about_section: {
+    title: "About Travilio",
+    subtitle: "Your Trusted Travel Partner",
+    description:
+      "Travilio is dedicated to making your travel dreams a reality. With a wealth of experience and a passion for adventure, we specialize in curating personalized travel experiences to some of the world's most breathtaking destinations. Whether you're seeking a serene beach holiday, an adventurous trek, or a cultural immersion, Travilio has the perfect itinerary for you.",
+    image: "/images/kashmir-3.jpg",
+    image_2: "/images/dubai.jpg",
+    image_3: "/images/vietnam.jpg",
+    signature: "/images/signature.svg",
+    highlights: [
+      {
+        icon: <BsGlobe className="w-10 h-10 text-orange-500" />,
+        title: "Global Destinations",
+        description:
+          "Explore the best destinations around the world with our carefully crafted tours.",
+      },
+      {
+        icon: <FcRating className="w-10 h-10 text-orange-500" />,
+        title: "Top Rated Service",
+        description:
+          "Our customers love us! We pride ourselves on delivering top-notch service and unforgettable experiences.",
+      },
+      {
+        icon: <TbFriends className="w-10 h-10 text-orange-500" />,
+        title: "Personalized Itineraries",
+        description:
+          "Every trip is unique. We tailor our itineraries to meet your personal preferences and interests.",
+      },
+      {
+        icon: <BiShieldAlt className="w-10 h-10 text-orange-500" />,
+        title: "Safe and Secure",
+        description:
+          "Your safety is our priority. We ensure all our tours and activities are safe and secure.",
+      },
+    ],
+  },
+
   features: [
     {
       icon: (
@@ -124,10 +165,10 @@ export const HOME_PAGE = {
     },
   ],
   banner_cta: {
-    headline: "Explore the World with Travilio",
-    subheadline: "Unforgettable journeys to breathtaking destinations",
-    cta_text: "Discover Now",
-    cta_url: "/destinations",
+    headline: "Plan Your Dream Vacation with Travilio",
+    subheadline: "Get a customized quote for your next adventure",
+    cta_text: "Get a Quote",
+    cta_url: "/contact-us",
     background_image: "kashmir-1",
   },
   popular_destinations: {
@@ -159,6 +200,18 @@ export const HOME_PAGE = {
         name: "Vietnam",
         state_province: "vietnam",
         link: "/destinations/vietnam",
+      },
+      {
+        image: "/images/goa.jpg",
+        name: "Goa",
+        state_province: "goa",
+        link: "/destinations/goa",
+      },
+      {
+        image: "/images/kerala.jpg",
+        name: "Kerala",
+        state_province: "kerala",
+        link: "/destinations/kerala",
       },
     ],
   },

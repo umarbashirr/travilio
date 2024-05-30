@@ -1,8 +1,10 @@
+import AboutSection from "@/components/homepage/AboutSection";
 import CtaBanner from "@/components/homepage/CtaBanner";
 import FeaturesSection from "@/components/homepage/FeaturesSection";
 import HeroSection from "@/components/homepage/HeroSection";
 import Packages from "@/components/homepage/Packages";
 import PopularDestinations from "@/components/homepage/PopularDestinations";
+import PaddingSectionWrapper from "@/components/padding-section-wrapper";
 import SectionWrapper from "@/components/section-wrapper";
 
 export default function Home() {
@@ -20,6 +22,9 @@ export default function Home() {
       </SectionWrapper>
       <SectionWrapper>
         <Packages />
+      </SectionWrapper>
+      <SectionWrapper>
+        <AboutSection />
       </SectionWrapper>
     </div>
   );

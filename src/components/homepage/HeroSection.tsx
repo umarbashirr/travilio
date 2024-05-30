@@ -9,8 +9,10 @@ const HeroSection = () => {
     <div
       style={{
         background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${HOME_PAGE?.hero?.background_image})`,
+        backgroundRepeat: "no-repeat",
+        width: "100%",
       }}
-      className="bg-cover bg-center min-h-[calc(100vh-124px)] flex items-center justify-center"
+      className="bg-fill bg-center min-h-[calc(100vh-124px)] flex items-center justify-center"
     >
       <BoxedContainer className="w-full h-full flex flex-col text-center items-center justify-center text-white">
         <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">
