@@ -14,7 +14,7 @@ interface SingleTourPackageCardProps {
 const SingleTourPackageCard = ({ tourPackage }: SingleTourPackageCardProps) => {
   return (
     <div className="border rounded-xl shadow-sm overflow-hidden">
-      <div className="relative w-full h-[350px] overflow-hidden">
+      <div className="relative w-full h-[250px] lg:h-[350px] overflow-hidden">
         <Image
           src={`/images/${tourPackage?.image}.jpg`}
           alt={tourPackage.name}

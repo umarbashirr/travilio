@@ -18,7 +18,7 @@ const Packages = () => {
           </p>
         </header>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {TOUR_PACKAGES.map((tourPackage) => {
+          {TOUR_PACKAGES.slice(0, 3).map((tourPackage) => {
             return (
               <SingleTourPackageCard
                 key={tourPackage.id}
@@ -26,6 +26,11 @@ const Packages = () => {
               />
             );
           })}
+        </div>
+        <div className="flex items-center justify-end">
+          <button className="mt-8 border border-orange-500 text-orange-500 py-2 px-4 rounded-full hover:bg-orange-500 hover:text-white duration-200 ease-in-out transition-all">
+            View All Packages
+          </button>
         </div>
       </div>
     </BoxedContainer>

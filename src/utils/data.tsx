@@ -3,11 +3,13 @@ import { BiShieldAlt, BiSolidDiscount } from "react-icons/bi";
 import { BsGlobe } from "react-icons/bs";
 import { FcRating } from "react-icons/fc";
 import { TbFriends } from "react-icons/tb";
+import { SiteInfo } from "@/interfaces/site.interface";
 
-export const SITE_INFO = {
+export const SITE_INFO: SiteInfo = {
   site_name: "Travilio",
   tagline: "Your Gateway to Unforgettable Adventures",
   logo: "/images/full-logo.svg",
+  white_logo: "/images/white-logo.svg",
   contact_email: "info@travilio.com",
   contact_phone: "+1 (555) 123-4567",
   address: {
@@ -216,6 +218,50 @@ export const HOME_PAGE = {
     ],
   },
   testimonials: [
+    {
+      quote:
+        "An amazing experience! The tour was well organized and the guide was fantastic.",
+      author: "John Doe",
+      location: "California, USA",
+    },
+    {
+      quote: "A trip to remember! Highly recommend their services.",
+      author: "Jane Smith",
+      location: "London, UK",
+    },
+    {
+      quote:
+        "An amazing experience! The tour was well organized and the guide was fantastic.",
+      author: "John Doe",
+      location: "California, USA",
+    },
+    {
+      quote: "A trip to remember! Highly recommend their services.",
+      author: "Jane Smith",
+      location: "London, UK",
+    },
+    {
+      quote:
+        "An amazing experience! The tour was well organized and the guide was fantastic.",
+      author: "John Doe",
+      location: "California, USA",
+    },
+    {
+      quote: "A trip to remember! Highly recommend their services.",
+      author: "Jane Smith",
+      location: "London, UK",
+    },
+    {
+      quote:
+        "An amazing experience! The tour was well organized and the guide was fantastic.",
+      author: "John Doe",
+      location: "California, USA",
+    },
+    {
+      quote: "A trip to remember! Highly recommend their services.",
+      author: "Jane Smith",
+      location: "London, UK",
+    },
     {
       quote:
         "An amazing experience! The tour was well organized and the guide was fantastic.",
